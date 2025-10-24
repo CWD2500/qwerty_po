@@ -8,10 +8,9 @@
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-   margin-top: -40px;
+   margin-top: 50px;
 }
 
-/* الشريط */
 .skills-header {
   background: linear-gradient(to left, #243CAC, #762C95);
   padding: 5px 50px;
@@ -41,7 +40,6 @@
   left: 100%;
 }
 
-/* العنوان */
 .skills-title {
   color: white;
   font-weight: bold;
@@ -54,7 +52,6 @@
   z-index: 1;
 }
 
-/* الشبكة */
 .skills-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
@@ -64,7 +61,6 @@
   max-width: 1100px;
 }
 
-/* الكروت */
 .skill-card {
   background: linear-gradient(145deg, #0C2C68, #1a3a7a);
   color: white;
@@ -128,7 +124,7 @@
   font-weight: 700;
   position: relative;
   z-index: 1;
-  min-height: 60px; /* ارتفاع ثابت للعنوان */
+  min-height: 60px; 
 }
 
 .card-title i {
@@ -160,7 +156,7 @@
   align-items: center;
   transition: all 0.3s ease;
   position: relative;
-  flex: 1; /* كل عنصر يأخذ نفس المساحة */
+  flex: 1;
 }
 
 .card-list li::before {
@@ -227,7 +223,6 @@
   background: #8B5CF6;
 }
 
-/* حدود علوية لكل كارد */
 .border-blue {
   border-top: 4px solid #3B82F6;
 }
@@ -240,7 +235,6 @@
   border-top: 4px solid #8B5CF6;
 }
 
-/* تأثيرات إضافية للحدود */
 .border-blue::before {
   background: linear-gradient(90deg, #3B82F6, transparent);
 }
