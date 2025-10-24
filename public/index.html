@@ -21,16 +21,16 @@ window.$RefreshSig$ = () => (type) => type;</script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
 
-    <!-- ✅ تسجيل Service Worker بدون أي console.log -->
+
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
           navigator.serviceWorker.register('/sw.js')
             .then(function(registration) {
-              // ✅ لا تضع أي console.log هنا
+              //  لا تضع أي console.log هنا
             })
             .catch(function(error) {
-              // ✅ لا تضع أي console.log هنا
+              //  لا تضع أي console.log هنا
             });
         });
       }
