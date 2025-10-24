@@ -161,7 +161,6 @@ const initDB = () => {
                 store.createIndex('status', 'status');
             }
             
-            // إنشاء جدول للمشاريع (للعرض دون اتصال)
             if (!db.objectStoreNames.contains('cached_projects')) {
                 db.createObjectStore('cached_projects', { keyPath: 'id' });
             }
