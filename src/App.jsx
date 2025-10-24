@@ -4,13 +4,14 @@ import viteLogo from '/vite.svg'
 import './Components/Header/header.css'
 import  Header from "./Components/Header/Header"
 import  Footer from "./Components/Footer/Footer"
+import BackToTop from './Components/BackToTop';
 import  Home from "./WebPage/Home"
 import  Skills from "./WebPage/Skills"
 import Projects from './WebPage/Projects'
 import AboutMy from './WebPage/AboutMy'
 import Contact from './WebPage/Contact'
 import { ToastContainer } from 'react-toastify';
-import BackToTop from './components/BackToTop';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 
