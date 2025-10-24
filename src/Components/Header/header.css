@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+/* تخصيص شريط التمرير (Scrollbar) للمتصفح فقط */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A162D;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #AF2084, #0A162D);
+  border-radius: 8px;
+  border: 3px solid #0A162D;
+  min-height: 40px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0A162D, #AF2084);
+}
+
+::-webkit-scrollbar-corner {
+  background: #0A162D;
+}
+
+/* للفايرفوكس */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #AF2084 #0A162D;
+}
+
+/* جعل الحركة سلسة وبطيئة */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* التأكد أن العناصر الداخلية لا تتأثر */
+.skills-container,
+.projects-container, 
+.about-container,
+.contact-container,
+.modal,
+.any-internal-container {
+  /* إرجاع الـ scrollbar للافتراضي في العناصر الداخلية */
+  scrollbar-width: auto;
+  scrollbar-color: auto;
+}
+
+.skills-container::-webkit-scrollbar,
+.projects-container::-webkit-scrollbar, 
+.about-container::-webkit-scrollbar,
+.contact-container::-webkit-scrollbar,
+.modal::-webkit-scrollbar,
+.any-internal-container::-webkit-scrollbar {
+  width: auto;
+}
+
+.skills-container::-webkit-scrollbar-track,
+.projects-container::-webkit-scrollbar-track,
+.about-container::-webkit-scrollbar-track,
+.contact-container::-webkit-scrollbar-track,
+.modal::-webkit-scrollbar-track,
+.any-internal-container::-webkit-scrollbar-track {
+  background: auto;
+}
+
+.skills-container::-webkit-scrollbar-thumb,
+.projects-container::-webkit-scrollbar-thumb,
+.about-container::-webkit-scrollbar-thumb,
+.contact-container::-webkit-scrollbar-thumb,
+.modal::-webkit-scrollbar-thumb,
+.any-internal-container::-webkit-scrollbar-thumb {
+  background: auto;
+}
+:root {
+  --text-logo-color-start: #0843B5;
+  --text-logo-color-end: #AF2084;
+  --text-logo-hover-shadow: rgba(255, 255, 255, 0.5);
+  --text-logo-hover-scale: 1.03;
+}
+
+/* الخط العام */
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* النصوص */
+.text-log {
+  font-weight: bold;
+  font-size: 2rem; /* 3xl */
+  background: linear-gradient(to left, var(--text-logo-color-start), var(--text-logo-color-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+
+
+/* النصوص العادية */
+.text-content p {
+  color: #DFD9D9;
+  margin-bottom: 1rem;
+}
+
+/* الصورة */
+.profile-image-wrapper {
+  border-radius: 50%;
+  padding: 0.25rem;
+  background: linear-gradient(to right, #762C95, #1541B2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  display: inline-block;
+}
+
+.profile-image-wrapper img {
+  border-radius: 50%;
+  width: 16rem; /* w-64 */
+  max-width: 20rem; /* md:w-80 */
+}
+
+/* النجوم حول الصورة */
+.star {
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.star-yellow {
+  background-color: #FFD700;
+}
+
+.star-pink {
+  background-color: #FF69B4;
+}
+
+.star-blue {
+  background-color: #00BFFF;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+

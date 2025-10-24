@@ -1,0 +1,316 @@
+.skills-container {
+  padding: 0px 20px;
+    /* padding: 20px 20px 10px 20px;  */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+   margin-top: -40px;
+}
+
+/* الشريط */
+.skills-header {
+  background: linear-gradient(to left, #243CAC, #762C95);
+  padding: 5px 50px;
+  border-radius: 40px;
+  margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s;
+}
+
+.skills-header:hover::before {
+  left: 100%;
+}
+
+/* العنوان */
+.skills-title {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* الشبكة */
+.skills-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
+  gap: 25px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* الكروت */
+.skill-card {
+  background: linear-gradient(145deg, #0C2C68, #1a3a7a);
+  color: white;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.skill-card:hover::before {
+  transform: scaleX(1);
+}
+
+.skill-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.skill-card:hover::after {
+  opacity: 1;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  min-height: 60px; /* ارتفاع ثابت للعنوان */
+}
+
+.card-title i {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .card-title i {
+  transform: scale(1.1);
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  flex-grow: 1; /* يأخذ المساحة المتبقية */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  flex: 1; /* كل عنصر يأخذ نفس المساحة */
+}
+
+.card-list li::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0;
+  background: currentColor;
+  border-radius: 2px;
+  transition: height 0.3s ease;
+}
+
+.card-list li:hover::before {
+  height: 20px;
+}
+
+.card-list li:hover {
+  background: rgba(255, 255, 255, 0.05);
+  margin: 0 -15px;
+  padding: 14px 15px;
+  border-radius: 8px;
+  transform: translateX(5px);
+}
+
+.card-list li:last-child {
+  border-bottom: none;
+}
+
+.skill-dots {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dot.active {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px currentColor;
+}
+
+.border-blue .dot.active { 
+  color: #3B82F6; 
+  background: #3B82F6;
+}
+
+.border-green .dot.active { 
+  color: #10B981; 
+  background: #10B981;
+}
+
+.border-purple .dot.active { 
+  color: #8B5CF6; 
+  background: #8B5CF6;
+}
+
+/* حدود علوية لكل كارد */
+.border-blue {
+  border-top: 4px solid #3B82F6;
+}
+
+.border-green {
+  border-top: 4px solid #10B981;
+}
+
+.border-purple {
+  border-top: 4px solid #8B5CF6;
+}
+
+/* تأثيرات إضافية للحدود */
+.border-blue::before {
+  background: linear-gradient(90deg, #3B82F6, transparent);
+}
+
+.border-green::before {
+  background: linear-gradient(90deg, #10B981, transparent);
+}
+
+.border-purple::before {
+  background: linear-gradient(90deg, #8B5CF6, transparent);
+}
+
+@media (max-width: 1024px) {
+  .skills-cards {
+    grid-template-columns: repeat(2, 1fr); /* شاشات متوسطة: 2 أعمدة */
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 30px 15px;
+  }
+  
+  .skills-header {
+    padding: 10px 30px;
+    margin-bottom: 40px;
+  }
+  
+  .skills-title {
+    font-size: 20px;
+  }
+  
+  .skills-cards {
+    grid-template-columns: 1fr; /* شاشات صغيرة: عمود واحد */
+    gap: 20px;
+    max-width: 400px;
+  }
+  
+  .skill-card {
+    padding: 25px 20px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-header {
+    padding: 8px 25px;
+  }
+  
+  .skills-title {
+    font-size: 18px;
+    gap: 8px;
+  }
+  
+  .skill-card {
+    padding: 20px 15px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    min-height: 45px;
+  }
+  
+  .card-list li {
+    padding: 12px 0;
+  }
+}

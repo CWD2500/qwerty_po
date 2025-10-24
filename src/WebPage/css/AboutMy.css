@@ -1,0 +1,241 @@
+.about-container {
+padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-header {
+  background: linear-gradient(to left, #243CAC, #762C95);
+  padding: 5px 50px;
+  border-radius: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.about-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.8s;
+}
+
+.about-header:hover::before {
+  left: 100%;
+}
+
+.about-title {
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.about-text {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  padding: 30px;
+  /* background: rgba(30, 41, 59, 0.6); */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); */
+}
+
+.about-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.certificate-card {
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.certificate-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3A86FF, #8338EC, #FF006E);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.certificate-card:hover::before {
+  opacity: 1;
+}
+
+.certificate-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* تأثير Hover للكروت */
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(30, 41, 59, 0.9);
+}
+
+/* أيقونة الكارد */
+.card-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+/* العنوان داخل الكارد */
+.certificate-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #F8FAFC;
+}
+
+.certificate-institute {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #CBD5E1;
+  opacity: 0.9;
+}
+
+.certificate-year {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.certificate-card:hover .certificate-year {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 40px 15px;
+  }
+  
+  .about-text {
+    font-size: 16px;
+    padding: 25px;
+    margin-bottom: 40px;
+  }
+  
+  .certificate-card {
+    padding: 25px 20px;
+  }
+  
+  .about-header {
+    padding: 10px 40px;
+  }
+  
+  .about-title {
+    font-size: 20px;
+  }
+  
+  .certificates-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header {
+    padding: 8px 30px;
+  }
+  
+  .about-title {
+    font-size: 18px;
+  }
+  
+  .about-text {
+    font-size: 15px;
+    padding: 20px;
+    line-height: 1.7;
+  }
+  
+  .certificate-title {
+    font-size: 18px;
+  }
+  
+  .certificate-institute {
+    font-size: 14px;
+  }
+}
