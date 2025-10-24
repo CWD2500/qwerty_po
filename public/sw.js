@@ -2,39 +2,32 @@ const CACHE_NAME = 'portfolio-offline-v2';
 const API_URL = 'http://localhost:8000/api';
 
 
-// ... (الكود السابق يبقى كما هو)
 
-// ✅ دالة جديدة للتحقق من الاتصال وإعادة الإرسال
 const checkConnectionAndRetry = async () => {
     try {
-        // محاولة الاتصال بالسيرفر
         const testResponse = await fetch(`${API_URL}/contact/token`, {
             method: 'GET',
             timeout: 5000
         });
         
         if (testResponse.ok) {
-            // console.log('✅ Server is back online, retrying messages...');
             await retryPendingMessages();
             return true;
         }
     } catch (error) {
-        // console.log('❌ Server still offline');
         return false;
     }
 };
 
-// ✅ التحقق الدوري من الاتصال
 const startConnectionChecker = () => {
     setInterval(async () => {
         const pendingMessages = await getPendingMessages();
         if (pendingMessages.length > 0) {
             await checkConnectionAndRetry();
         }
-    }, 10000); // التحقق كل 10 ثواني
+    }, 10000); 
 };
 
-// ✅ إشعار جميع Tabs عند اتصال الإنترنت
 const notifyAllClients = async (message) => {
     const clients = await self.clients.matchAll();
     clients.forEach(client => {
@@ -42,19 +35,15 @@ const notifyAllClients = async (message) => {
     });
 };
 
-// ✅ Service Worker Events
 self.addEventListener('install', (event) => {
-    // console.log('🚀 Service Worker installed');
     self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
-    // console.log('🔛 Service Worker activated');
     event.waitUntil(self.clients.claim());
-    startConnectionChecker(); // بدء المراقبة
+    startConnectionChecker(); 
 });
 
-// ✅ اعتراض طلبات الشبكة
 self.addEventListener('fetch', (event) => {
     const url = event.request.url;
     
@@ -63,24 +52,19 @@ self.addEventListener('fetch', (event) => {
     }
 });
 
-// ✅ معالجة الرسائل من الصفحة
 self.addEventListener('message', (event) => {
     if (event.data && event.data.type === 'NETWORK_STATUS') {
         if (event.data.isOnline) {
-            // console.log('📡 Page notified us that network is online');
             setTimeout(() => retryPendingMessages(), 2000);
         }
     }
     
     if (event.data && event.data.type === 'MANUAL_RETRY') {
-        // console.log('🔄 Manual retry triggered');
         retryPendingMessages();
     }
 });
 
-// ✅ تحسين دالة إعادة الإرسال
 async function retryPendingMessages() {
-    // console.log('🔄 Starting to retry pending messages...');
     
     const pendingMessages = await getPendingMessages();
     // console.log(`📨 Found ${pendingMessages.length} pending messages`);
@@ -89,13 +73,11 @@ async function retryPendingMessages() {
     let failCount = 0;
     
     for (const message of pendingMessages) {
-        if (message.attempts >= 5) { // زيادة الحد إلى 5 محاولات
-            // console.log(`⏩ Skipping message ${message.id} - too many attempts`);
+        if (message.attempts >= 5) { 
             continue;
         }
         
         try {
-            // console.log(`🔄 Retrying message ${message.id}...`);
             
             const token = await getCSRFToken();
             const fingerprint = await getClientFingerprint();
@@ -115,11 +97,9 @@ async function retryPendingMessages() {
             });
             
             if (response.ok) {
-                // console.log(`✅ Message ${message.id} sent successfully!`);
                 await deleteMessage(message.id);
                 successCount++;
                 
-                // ✅ إشعار الصفحة بالنجاح
                 await notifyAllClients({
                     type: 'MESSAGE_SENT',
                     messageId: message.id,
@@ -129,15 +109,12 @@ async function retryPendingMessages() {
                 throw new Error(`Server responded with ${response.status}`);
             }
         } catch (error) {
-            // console.log(`❌ Failed to send message ${message.id}:`, error.message);
             await updateMessageAttempts(message.id, (message.attempts || 0) + 1);
             failCount++;
         }
     }
     
-    // console.log(`📊 Retry completed: ${successCount} success, ${failCount} failed`);
     
-    // ✅ إشعار الصفحة بنتيجة المحاولة
     await notifyAllClients({
         type: 'RETRY_COMPLETED',
         successCount,
@@ -146,7 +123,6 @@ async function retryPendingMessages() {
     });
 }
 
-// ✅ تحسين دالة الحصول على Token
 async function getCSRFToken() {
     try {
         const response = await fetch(`${API_URL}/contact/token`, {
@@ -163,11 +139,9 @@ async function getCSRFToken() {
             throw new Error('Token request failed');
         }
     } catch (error) {
-        // console.log('⚠️ Using offline token');
         return 'offline-token-' + Date.now();
     }
 }
-// تهيئة IndexedDB
 const initDB = () => {
     return new Promise((resolve, reject) => {
         const request = indexedDB.open('ContactMessagesDB', 2);
@@ -178,7 +152,6 @@ const initDB = () => {
         request.onupgradeneeded = (event) => {
             const db = event.target.result;
             
-            // إنشاء جدول الرسائل المعلقة
             if (!db.objectStoreNames.contains('pending_messages')) {
                 const store = db.createObjectStore('pending_messages', { 
                     keyPath: 'id', 
@@ -196,7 +169,6 @@ const initDB = () => {
     });
 };
 
-// تخزين رسالة محلياً
 const storeOfflineMessage = async (messageData) => {
     try {
         const db = await initDB();
@@ -224,7 +196,6 @@ const storeOfflineMessage = async (messageData) => {
     }
 };
 
-// جلب جميع الرسائل المعلقة
 const getPendingMessages = async () => {
     try {
         const db = await initDB();
@@ -241,7 +212,6 @@ const getPendingMessages = async () => {
     }
 };
 
-// حذف رسالة بعد إرسالها بنجاح
 const deleteMessage = async (id) => {
     try {
         const db = await initDB();
@@ -260,7 +230,6 @@ const deleteMessage = async (id) => {
     }
 };
 
-// تحديث عدد محاولات الإرسال
 const updateMessageAttempts = async (id, attempts) => {
     try {
         const db = await initDB();
@@ -291,25 +260,20 @@ self.addEventListener('activate', (event) => {
     event.waitUntil(self.clients.claim());
 });
 
-// اعتراض طلبات الشبكة
 self.addEventListener('fetch', (event) => {
     const url = event.request.url;
     
-    // اعتراض طلبات إرسال الرسائل
     if (url.includes('/contact/create/contacts') && event.request.method === 'POST') {
         event.respondWith(handleContactRequest(event.request));
     }
     
-    // اعتراض طلبات جلب المشاريع للتخزين المؤقت
     if (url.includes('/projects/all') && event.request.method === 'GET') {
         event.respondWith(handleProjectsRequest(event.request));
     }
 });
 
-// معالجة طلبات الاتصال
 async function handleContactRequest(request) {
     try {
-        // محاولة الإرسال إلى السيرفر أولاً
         const response = await fetch(request.clone());
         
         if (response.ok) {
@@ -317,7 +281,6 @@ async function handleContactRequest(request) {
         }
         throw new Error('Server responded with error');
     } catch (error) {
-        // إذا فشل الإرسال، نخزن محلياً
         // console.log('Server offline, storing message locally...');
         
         try {
@@ -352,18 +315,15 @@ async function handleContactRequest(request) {
     }
 }
 
-// معالجة طلبات المشاريع
 async function handleProjectsRequest(request) {
     try {
         const response = await fetch(request);
         const projects = await response.json();
         
-        // تخزين المشاريع محلياً
         await cacheProjects(projects);
         
         return response;
     } catch (error) {
-        // إذا لم يكن هناك اتصال، نعيد البيانات المخزنة
         const cachedProjects = await getCachedProjects();
         return new Response(JSON.stringify(cachedProjects), {
             status: 200,
@@ -375,17 +335,14 @@ async function handleProjectsRequest(request) {
     }
 }
 
-// تخزين المشاريع محلياً
 async function cacheProjects(projects) {
     try {
         const db = await initDB();
         const transaction = db.transaction(['cached_projects'], 'readwrite');
         const store = transaction.objectStore('cached_projects');
         
-        // مسح البيانات القديمة
         await store.clear();
         
-        // تخزين البيانات الجديدة
         if (projects.data && Array.isArray(projects.data)) {
             for (const project of projects.data) {
                 await store.add(project);
@@ -396,7 +353,6 @@ async function cacheProjects(projects) {
     }
 }
 
-// جلب المشاريع المخزنة محلياً
 async function getCachedProjects() {
     try {
         const db = await initDB();
@@ -419,7 +375,6 @@ async function getCachedProjects() {
     }
 }
 
-// إعادة إرسال الرسائل المعلقة عند اتصال الإنترنت
 self.addEventListener('sync', (event) => {
     if (event.tag === 'background-sync-messages') {
         // console.log('Background sync triggered');
@@ -427,7 +382,6 @@ self.addEventListener('sync', (event) => {
     }
 });
 
-// محاولة إعادة إرسال الرسائل المعلقة
 async function retryPendingMessages() {
     // console.log('Retrying pending messages...');
     
@@ -436,12 +390,10 @@ async function retryPendingMessages() {
     
     for (const message of pendingMessages) {
         if (message.attempts >= 3) {
-            // تخطي الرسائل التي فشلت كثيراً
             continue;
         }
         
         try {
-            // الحصول على token جديد
             const token = await getCSRFToken();
             const fingerprint = await getClientFingerprint();
             
@@ -472,7 +424,6 @@ async function retryPendingMessages() {
     }
 }
 
-// الحصول على CSRF Token
 async function getCSRFToken() {
     try {
         const response = await fetch(`${API_URL}/contact/token`);
@@ -483,7 +434,6 @@ async function getCSRFToken() {
     }
 }
 
-// إنشاء بصمة العميل
 async function getClientFingerprint() {
     try {
         const components = [
@@ -500,11 +450,9 @@ async function getClientFingerprint() {
     }
 }
 
-// إشعار الصفحة عند اتصال الإنترنت
 self.addEventListener('message', (event) => {
     if (event.data && event.data.type === 'NETWORK_STATUS') {
         if (event.data.isOnline) {
-            // محاولة إرسال الرسائل المعلقة عند اتصال الإنترنت
             retryPendingMessages();
         }
     }
