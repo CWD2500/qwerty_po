@@ -37,7 +37,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen px-4 sm:px-8 md:px-16 py-16 md:py-20 flex justify-center">
+    <div className="px-4 sm:px-8 md:px-16 py-16 md:py-20 flex justify-center">
       <div className="max-w-7xl w-full flex flex-col md:flex-row gap-8 md:gap-20 items-center md:items-start">
         
         <div className="flex-1 flex flex-col justify-start content-wrapper text-content order-2 md:order-1">
