@@ -63,7 +63,7 @@ export default function Home() {
             <a href="https://www.facebook.com/muhammed.soliman.658838/" rel="noopener noreferrer" target="_blank" className="text-links-button flex items-center gap-2 px-4 py-2">
               FaceBook <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.youtube.com/@Learnprogramming_codeforsyria/playlists" target="_blank" rel="noopener noreferrer" className="text-links-button flex items-center gap-2 px-4 py-2 md:w-auto w-full justify-center" style={{width:"100%"}}>
+            <a href="https://www.youtube.com/@Learnprogramming_codeforsyria/playlists" target="_blank" rel="noopener noreferrer" className="text-links-button flex items-center gap-2 px-4 py-2 md:w-auto w-full justify-center" style={{width:"85%"}}>
               Youtube <i className="fab fa-youtube"></i>
             </a>
           </div>
