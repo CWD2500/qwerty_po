@@ -44,14 +44,14 @@ export default function AboutMy() {
         {[
           {
             title: "الشهادة الجامعية",
-            institute: "جامعة حلب قسم هندسة البرمجيات",
-            year: "2027",
+            institute: "جامعة حلب قسم هندسة البرمجيات قيد الدراسة",
+            year: "----",
             icon: "fa-graduation-cap",
             color: "#3A86FF"
           },
           {
             title: "شهادة المعهد",
-            institute: "المعهد العالي للتقنية قسم هندسة البرمجيات",
+            institute: "المعهد التقاني للتقنية  الحاسوب قسم هندسة البرمجيات المرتبة الاولة",
             year: "2024",
             icon: "fa-laptop-code",
             color: "#8338EC"
