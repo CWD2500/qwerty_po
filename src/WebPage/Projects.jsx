@@ -32,7 +32,7 @@ const mockProjects = [
     github_url: "https://github.com/CWD2500/JobStream-Recruit-System", 
     linkedin_url: null,
     facebook_url: null
-  }
+  },
   {
     id: 4,
     name: "موقع شخصي",
