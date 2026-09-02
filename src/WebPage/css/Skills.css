@@ -1,19 +1,17 @@
 .skills-container {
   padding: 0px 20px;
-    /* padding: 20px 20px 10px 20px;  */
-
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-   margin-top: 50px;
+  margin-top: 50px;
 }
 
 .skills-header {
   background: linear-gradient(to left, #243CAC, #762C95);
-  padding: 5px 50px;
+  padding: 10px 50px;
   border-radius: 40px;
   margin-bottom: 50px;
   width: 100%;
@@ -54,7 +52,7 @@
 
 .skills-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   justify-items: center;
   width: 100%;
@@ -64,17 +62,17 @@
 .skill-card {
   background: linear-gradient(145deg, #0C2C68, #1a3a7a);
   color: white;
-  padding: 30px 25px;
+  padding: 25px 20px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
-  width: 300px;
-  height: 100%; 
+  width: 100%;
+  max-width: 330px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .skill-card::before {
@@ -118,17 +116,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  font-size: 17px;
-  margin-bottom: 25px;
+  gap: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
   font-weight: 700;
   position: relative;
   z-index: 1;
-  min-height: 60px; 
+  min-height: 40px; 
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .card-title i {
-  font-size: 24px;
+  font-size: 20px;
   transition: transform 0.3s ease;
 }
 
@@ -142,30 +142,31 @@
   margin: 0;
   position: relative;
   z-index: 1;
-  flex-grow: 1; /* يأخذ المساحة المتبقية */
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  gap: 4px;
 }
 
 .card-list li {
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
   position: relative;
-  flex: 1;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 .card-list li::before {
   content: '';
   position: absolute;
-  left: -10px;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 4px;
+  width: 3px;
   height: 0;
   background: currentColor;
   border-radius: 2px;
@@ -173,39 +174,37 @@
 }
 
 .card-list li:hover::before {
-  height: 20px;
+  height: 14px;
 }
 
 .card-list li:hover {
-  background: rgba(255, 255, 255, 0.05);
-  margin: 0 -15px;
-  padding: 14px 15px;
-  border-radius: 8px;
-  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(4px);
 }
 
 .card-list li:last-child {
   border-bottom: none;
 }
 
+/* تصغير النقاط وتنسيقها بشكل أصغر وأنيق */
 .skill-dots {
   display: flex;
-  gap: 5px;
+  gap: 4px;
   align-items: center;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .dot.active {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px currentColor;
+  transform: scale(1.15);
+  box-shadow: 0 0 6px currentColor;
 }
 
 .border-blue .dot.active { 
@@ -247,9 +246,10 @@
   background: linear-gradient(90deg, #8B5CF6, transparent);
 }
 
+/* Responsive Rules */
 @media (max-width: 1024px) {
   .skills-cards {
-    grid-template-columns: repeat(2, 1fr); /* شاشات متوسطة: 2 أعمدة */
+    grid-template-columns: repeat(2, 1fr);
     max-width: 800px;
   }
 }
@@ -264,23 +264,10 @@
     margin-bottom: 40px;
   }
   
-  .skills-title {
-    font-size: 20px;
-  }
-  
   .skills-cards {
-    grid-template-columns: 1fr; /* شاشات صغيرة: عمود واحد */
+    grid-template-columns: 1fr;
     gap: 20px;
     max-width: 400px;
-  }
-  
-  .skill-card {
-    padding: 25px 20px;
-  }
-  
-  .card-title {
-    font-size: 20px;
-    min-height: 50px;
   }
 }
 
@@ -295,16 +282,6 @@
   }
   
   .skill-card {
-    padding: 20px 15px;
-  }
-  
-  .card-title {
-    font-size: 18px;
-    margin-bottom: 20px;
-    min-height: 45px;
-  }
-  
-  .card-list li {
-    padding: 12px 0;
+    padding: 18px 15px;
   }
 }
