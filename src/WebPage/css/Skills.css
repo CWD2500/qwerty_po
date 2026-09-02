@@ -1,4 +1,8 @@
+/* استيراد خط Cairo بمختلف الأوزان */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+
 .skills-container {
+  font-family: 'Cairo', sans-serif; /* تطبيق الخط على كامل المكون */
   padding: 0px 20px;
   display: flex;
   flex-direction: column;
@@ -40,8 +44,8 @@
 
 .skills-title {
   color: white;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 800; /* خط عريض جداً للعنوان الرئيسية */
+  font-size: 22px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -117,9 +121,9 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-size: 16px;
+  font-size: 17px;
   margin-bottom: 15px;
-  font-weight: 700;
+  font-weight: 700; /* خط عريض لعناوين الكروت */
   position: relative;
   z-index: 1;
   min-height: 40px; 
@@ -158,6 +162,7 @@
   position: relative;
   border-radius: 6px;
   font-size: 14px;
+  font-weight: 600; /* يجعل أسماء التقنيات عريضة وواضحة جداً */
 }
 
 .card-list li::before {
