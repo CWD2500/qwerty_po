@@ -3,8 +3,8 @@ import "./css/Skills.css";
 export default function Skills() {
 
 
-  return (
-    <div className="skills-container"  id="skills">
+return (
+    <div className="skills-container" id="skills">
 
       {/* العنوان */}
       <div className="skills-header ">
@@ -14,29 +14,16 @@ export default function Skills() {
         </h1>
       </div>
 
-
-
       {/* الكروت */}
       <div className="skills-cards">
+        
         {/* Programming Languages */}
-        <div className="skill-card  border-green">
+        <div className="skill-card border-green">
           <h2 className="card-title">
             <i className="fa-solid fa-code"></i>
             لغات البرمجة
           </h2>
-            <ul className="card-list">
-            <li>
-              <span>---</span>
-              <div className="skill-dots">
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-              </div>
-            </li>
-            </ul>
-          {/* <ul className="card-list">
+          <ul className="card-list">
             <li>
               <span>C</span>
               <div className="skill-dots">
@@ -44,7 +31,7 @@ export default function Skills() {
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
               </div>
             </li>
             <li>
@@ -54,16 +41,36 @@ export default function Skills() {
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
               </div>
             </li>
             <li>
-              <span>C#</span>
+              <span>JavaScript</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
+              </div>
+            </li>
+            <li>
+              <span>TypeScript</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot"></div>
+              </div>
+            </li>
+            <li>
+              <span>PHP</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
             </li>
@@ -73,11 +80,21 @@ export default function Skills() {
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot"></div>
                 <div className="dot"></div>
               </div>
             </li>
-          </ul> */}
+            <li>
+              <span>HTML5 / CSS3</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+              </div>
+            </li>
+          </ul>
         </div>
 
         {/* Tools */}
@@ -88,26 +105,6 @@ export default function Skills() {
           </h2>
           <ul className="card-list">
             <li>
-              <span>---</span>
-              <div className="skill-dots">
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-              </div>
-            </li>
-            {/* <li>
-              <span>GitHub</span>
-              <div className="skill-dots">
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot"></div>
-              </div>
-            </li>
-            <li>
               <span>VS Code</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
@@ -116,7 +113,27 @@ export default function Skills() {
                 <div className="dot active"></div>
                 <div className="dot active"></div>
               </div>
-            </li> */}
+            </li>
+            <li>
+              <span>Cursor</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot"></div>
+              </div>
+            </li>
+            <li>
+              <span>Postman</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot"></div>
+              </div>
+            </li>
           </ul>
         </div>
 
@@ -124,21 +141,21 @@ export default function Skills() {
         <div className="skill-card border-purple">
           <h2 className="card-title">
             <i className="fa-solid fa-database"></i>
-          قواعد بيانات
+            قواعد بيانات
           </h2>
           <ul className="card-list">
             <li>
-              <span>---</span>
+              <span>MySQL</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
               </div>
             </li>
-            {/* <li>
-              <span>Laravel</span>
+            <li>
+              <span>PostgreSQL</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
@@ -148,187 +165,217 @@ export default function Skills() {
               </div>
             </li>
             <li>
-              <span>Node</span>
+              <span>SQLite</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot"></div>
+              </div>
+            </li>
+            <li>
+              <span>MongoDB</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot"></div>
                 <div className="dot"></div>
                 <div className="dot"></div>
               </div>
-            </li> */}
+            </li>
+            <li>
+              <span>ERD Design</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+              </div>
+            </li>
           </ul>
         </div>
+
         {/* BackEnd */}
         <div className="skill-card border-green">
           <h2 className="card-title">
             <i className="fa-solid fa-server"></i>
-          تطوير الخلفية (Back-End)
+            تطوير الخلفية (Back-End)
           </h2>
           <ul className="card-list">
             <li>
-              <span>---</span>
-              <div className="skill-dots">
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot"></div>
-              </div>
-            </li>
-            {/* <li>
               <span>Laravel</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
               </div>
             </li>
             <li>
-              <span>Node</span>
+              <span>Django</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot"></div>
+              </div>
+            </li>
+            <li>
+              <span>RESTful APIs</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+              </div>
+            </li>
+            <li>
+              <span>Node.js (Basic)</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot"></div>
                 <div className="dot"></div>
                 <div className="dot"></div>
               </div>
-            </li> */}
+            </li>
           </ul>
         </div>
-        {/* Front-End  */}
-        <div className="skill-card  border-blue">
+
+        {/* Front-End */}
+        <div className="skill-card border-blue">
           <h2 className="card-title">
             <i className="fa-solid fa-laptop-code"></i>
-         تطوير الواجهات (Front-End)
+            تطوير الواجهات (Front-End)
           </h2>
           <ul className="card-list">
             <li>
-              <span>---</span>
+              <span>React.js</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
               </div>
             </li>
-            {/* <li>
-              <span>Laravel</span>
+            <li>
+              <span>Vue.js</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
             </li>
             <li>
-              <span>Node</span>
+              <span>Tailwind CSS</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+              </div>
+            </li>
+            <li>
+              <span>Bootstrap 5</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
-            </li> */}
+            </li>
           </ul>
         </div>
+
         {/* Version Control */}
         <div className="skill-card border-green">
           <h2 className="card-title">
             <i className="fa-solid fa-code-branch"></i>
-          Version Control
+            Version Control
           </h2>
           <ul className="card-list">
             <li>
-              <span>---</span>
+              <span>Git</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
               </div>
             </li>
-            {/* <li>
-              <span>Laravel</span>
+            <li>
+              <span>GitHub</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
               </div>
-            </li> */}
-            {/* <li>
-              <span>Node</span>
-              <div className="skill-dots">
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-              </div>
-            </li> */}
+            </li>
           </ul>
         </div>
 
-
-{/* Opreating System */}
-          <div className="skill-card border-purple">
+        {/* Operating System */}
+        <div className="skill-card border-purple">
           <h2 className="card-title">
             <i className="fa-solid fa-terminal"></i>
-          Operating Systems
+            Operating Systems
           </h2>
           <ul className="card-list">
             <li>
-              <span>---</span>
+              <span>Fedora Linux</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
               </div>
             </li>
-            {/* <li>
-              <span>Laravel</span>
+            <li>
+              <span>Linux Terminal / Bash</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
             </li>
             <li>
-              <span>Node</span>
+              <span>Windows</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
-            </li> */}
+            </li>
           </ul>
         </div>
 
-
-
-{/* أدوات التطوير (Tools) */}
-          <div className="skill-card border-purple">
+        {/* أدوات التطوير (Tools) */}
+        <div className="skill-card border-purple">
           <h2 className="card-title">
             <i className="fa-solid fa-tools"></i>
-          أدوات التطوير (Tools)
+            أدوات التطوير (Tools)
           </h2>
           <ul className="card-list">
             <li>
-              <span>---</span>
+              <span>Composer & NPM</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
@@ -337,40 +384,28 @@ export default function Skills() {
                 <div className="dot"></div>
               </div>
             </li>
-            {/* <li>
-              <span>Laravel</span>
+            <li>
+              <span>Antigravity</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
-            </li> */}
-            {/* <li>
-              <span>Node</span>
-              <div className="skill-dots">
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-              </div>
-            </li> */}
+            </li>
           </ul>
         </div>
 
-
-
-{/* DevOps */}
-          <div className="skill-card border-purple">
+        {/* DevOps */}
+        <div className="skill-card border-purple">
           <h2 className="card-title">
             <i className="fas fa-cloud-upload-alt"></i>
-         DevOps
+            DevOps
           </h2>
           <ul className="card-list">
             <li>
-              <span>---</span>
+              <span>Docker</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
@@ -379,8 +414,8 @@ export default function Skills() {
                 <div className="dot"></div>
               </div>
             </li>
-            {/* <li>
-              <span>Laravel</span>
+            <li>
+              <span>GitHub Actions (CI/CD)</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
@@ -388,31 +423,49 @@ export default function Skills() {
                 <div className="dot"></div>
                 <div className="dot"></div>
               </div>
-            </li> */}
-            {/* <li>
-              <span>Node</span>
+            </li>
+            <li>
+              <span>Linux Server Deployment</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
-            </li> */}
+            </li>
           </ul>
         </div>
 
-
-
-{/* Additional Skills */}
-          <div className="skill-card border-purple">
+        {/* Additional Skills */}
+        <div className="skill-card border-purple">
           <h2 className="card-title">
             <i className="fas fa-lightbulb"></i>
-        Additional Skills
+            Additional Skills
           </h2>
           <ul className="card-list">
             <li>
-              <span>---</span>
+              <span>Software Architecture</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+              </div>
+            </li>
+            <li>
+              <span>OOP & SOLID</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+              </div>
+            </li>
+            <li>
+              <span>Memory Optimization</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
@@ -421,31 +474,20 @@ export default function Skills() {
                 <div className="dot"></div>
               </div>
             </li>
-            {/* <li>
-              <span>Laravel</span>
+            <li>
+              <span>Agile Methodology</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
-            </li> */}
-            {/* <li>
-              <span>Node</span>
-              <div className="skill-dots">
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-              </div>
-            </li> */}
+            </li>
           </ul> 
         </div>
 
       </div>
     </div>
-  
   );
 }
