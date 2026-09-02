@@ -424,16 +424,7 @@ return (
                 <div className="dot"></div>
               </div>
             </li>
-            <li>
-              <span>Antigravity</span>
-              <div className="skill-dots">
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot active"></div>
-                <div className="dot"></div>
-              </div>
-            </li>
+
           </ul>
         </div>
 
