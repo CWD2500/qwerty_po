@@ -17,11 +17,11 @@ const mockProjects = [
     id: 2,
     name: "EduFlow ERP",
     description: "نظام إدارة مؤسسي عالي الأداء ومُصمم لأتمتة سير العمل الأكاديمي والإداري للمؤسسات التعليمية الكبيرة باستخدام Laravel و MySQL.\n\nأبرز المميزات المعمارية:\n• محرك الانتقال الآلي: حساب النتائج وتصنيف ونقل الراسبين تلقائياً لنظام التكميلي.\n• إدارة المصفوفة الأكاديمية: ربط المعلمين بالمواد والتخصصات بدقة وعلاقات مرنة.\n• لوحة تحليلات لحظية: رسوم بيانية لعرض نسب النجاح والاعتراضات ومؤشرات الأداء.\n• أمان وصلاحيات صارمة: نظام RBAC متقدم لفصل صلاحيات الأدمن والمعلم والطالب.",
-    picture: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=400",
+    picture: eduflowImg, // تم استدعاء متغير الصورة المحلي هنا
     github_url: "https://github.com/CWD2500/EduFlow-ERP",
     linkedin_url: null,
     facebook_url: null
-  }
+  }, // <-- تم إضافة الفاصلة الناقصة هنا
   {
     id: 3,
     name: "تطبيق إدارة المهام",
@@ -33,7 +33,7 @@ const mockProjects = [
   {
     id: 4,
     name: "موقع شخصي",
-    description: "موقع شخصي تفاععي يعرض السيرة الذاتية والمشاريع والمهارات. مصمم بتقنيات حديثة مع تحسين لمحركات البحث.\n\nالمميزات:\n• تصميم متجاوب\n• تحسين SEO\n• نموذج تواصل\n• معرض المشاريع\n• مدونة شخصية",
+    description: "موقع شخصي تفاعلي يعرض السيرة الذاتية والمشاريع والمهارات. مصمم بتقنيات حديثة مع تحسين لمحركات البحث.\n\nالمميزات:\n• تصميم متجاوب\n• تحسين SEO\n• نموذج تواصل\n• معرض المشاريع\n• مدونة شخصية",
     picture: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400",
     github_url: "https://github.com/example/portfolio",
     linkedin_url: "https://linkedin.com/in/example",
@@ -67,16 +67,13 @@ export default function Projects() {
   const cardRefs = useRef([]);
 
   useEffect(() => {
-    // استخدام البيانات الوهمية مباشرة بدون محاولة الاتصال بالسيرفر
     const loadProjects = () => {
       setLoading(true);
       
-      // محاكاة وقت التحميل
       setTimeout(() => {
         setProjectsData(mockProjects);
         setLoading(false);
         
-        // تفعيل الـ observer بعد تحميل البيانات
         setTimeout(() => {
           const observer = new IntersectionObserver(
             (entries) => {
@@ -94,7 +91,7 @@ export default function Projects() {
             if (card) observer.observe(card);
           });
         }, 100);
-      }, 800); // محاكاة وقت التحميل
+      }, 800);
     };
 
     loadProjects();
@@ -111,8 +108,6 @@ export default function Projects() {
     setSelectedProject(null);
     document.body.style.overflow = 'unset';
   };
-
-
 
   if (loading) {
     return (
@@ -136,7 +131,7 @@ export default function Projects() {
   }
 
   return (
-    <div className="projects-container" id="projects" >
+    <div className="projects-container" id="projects">
       {/* العنوان */}
       <div className="projects-header">
         <h1 className="projects-title">
