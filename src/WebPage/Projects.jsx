@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import b2cMarketplaceImg from "../assets/a1.png";
 import eduflowImg from "../assets/dashboard.jpg";
+import jobStreamImg from "../assets/jobstream-dashboard.jpg";
 import "./css/Projects.css";
 
 // بيانات مشاريع وهمية
@@ -18,19 +19,20 @@ const mockProjects = [
     id: 2,
     name: "EduFlow ERP",
     description: "نظام إدارة مؤسسي عالي الأداء ومُصمم لأتمتة سير العمل الأكاديمي والإداري للمؤسسات التعليمية الكبيرة باستخدام Laravel و MySQL.\n\nأبرز المميزات المعمارية:\n• محرك الانتقال الآلي: حساب النتائج وتصنيف ونقل الراسبين تلقائياً لنظام التكميلي.\n• إدارة المصفوفة الأكاديمية: ربط المعلمين بالمواد والتخصصات بدقة وعلاقات مرنة.\n• لوحة تحليلات لحظية: رسوم بيانية لعرض نسب النجاح والاعتراضات ومؤشرات الأداء.\n• أمان وصلاحيات صارمة: نظام RBAC متقدم لفصل صلاحيات الأدمن والمعلم والطالب.",
-    picture: eduflowImg, // تم استدعاء متغير الصورة المحلي هنا
+    picture: eduflowImg,
     github_url: "https://github.com/CWD2500/EduFlow-ERP",
     linkedin_url: null,
     facebook_url: null
-  }, // <-- تم إضافة الفاصلة الناقصة هنا
-  {
-    id: 3,
-    name: "تطبيق إدارة المهام",
-    description: "تطبيق ويب لإدارة المهام والمشاريع الشخصية والجماعية. يتضمن تقويم ومهام متعددة وإشعارات.\n\nالمميزات:\n• إدارة مهام فردية وجماعية\n• تقويم متكامل\n• إشعارات تذكير\n• تقارير إنتاجية\n• تكامل مع التطبيقات الأخرى",
-    picture: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400",
-    github_url: "https://github.com/CWD2500/EduFlow-ERP",
-    linkedin_url: null,
   },
+{
+    id: 3,
+    name: "JobStream Recruit System",
+    description: "منصة توظيف إلكترونية متكاملة تهدف لإدارة دورة التوظيف الكاملة والربط بين الكفاءات والشركات عبر بيئة تقنية متقدمة وهيكلية بيانات مكونة من 12 جدولاً مرتبطة بإحكام.\n\n📖 عن المشروع:\nنظام إدارة توظيف استراتيجي (Enterprise ATS) يلغي العمليات التقليدية المجزأة، ويقوم بأتمتة التواصل والتنسيق بين المتقدمين وأصحاب العمل مع الحفاظ على سلامة البيانات ودقة الأدوار.\n\n✨ المميزات الرئيسية:\n• بناء السيرة الذاتية التفاعلي: إنشاء ملف رقمي شامل يربط المؤهلات، والخبرات، والمهارات، والشهادات المهنية.\n• تتبع الطلبات (ATS Dashboard): لوحة تحكم متقدمة لأصحاب العمل لمراجعة المتقدمين، وتحديث حالات الطلبات، مع أتمتة الإشعارات اللحظية.\n• نظام إشعارات ثنائي الاتجاه (Bidirectional): تنبيهات فورية للمتقدمين بحالة القبول أو الرفض مع إمكانية إضافة تعليمات خاصة.\n• إدارة الأدوار والصلاحيات (RBAC): فصل صارم لمنع تداخل العمليات بين المتقدمين (Seekers)، وأصحاب العمل (Employers)، والمشرفين (Admins).\n• البحث والفلترة المتقدمة: محرك بحث متعدد المعايير (حسب الموقع، التخصص، نوع العمل، والمستوى الخبري).\n\n🛠️ التقنيات المستخدمة:\nPython, Django, MySQL (12 Tables Architecture), RDBMS, RESTful APIs, RBAC, In-app & Email Notification Engine.",
+    picture: jobStreamImg, 
+    github_url: "https://github.com/CWD2500/JobStream-Recruit-System", 
+    linkedin_url: null,
+    facebook_url: null
+  }
   {
     id: 4,
     name: "موقع شخصي",
