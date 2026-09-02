@@ -368,14 +368,54 @@ return (
         </div>
 
         {/* أدوات التطوير (Tools) */}
-        <div className="skill-card border-purple">
+       <div className="skill-card border-purple">
           <h2 className="card-title">
             <i className="fa-solid fa-tools"></i>
             أدوات التطوير (Tools)
           </h2>
           <ul className="card-list">
             <li>
-              <span>Composer & NPM</span>
+              <span>Vite</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+              </div>
+            </li>
+            <li>
+              <span>Nginx</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+              </div>
+            </li>
+            <li>
+              <span>pnpm / NPM</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot"></div>
+              </div>
+            </li>
+            <li>
+              <span>Pip / Composer</span>
+              <div className="skill-dots">
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
+                <div className="dot"></div>
+              </div>
+            </li>
+            <li>
+              <span>ESLint</span>
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
