@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import eduflowImg from "../assets/images/dashboard.jpg";
+import eduflowImg from "../assets/dashboard.jpg";
 import "./css/Projects.css";
 
 // بيانات مشاريع وهمية
