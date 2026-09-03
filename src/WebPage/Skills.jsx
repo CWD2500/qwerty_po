@@ -31,7 +31,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot"></div>
               </div>
             </li>
             <li>
@@ -41,7 +41,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot"></div>
               </div>
             </li>
             <li>
@@ -80,7 +80,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
             </li>
@@ -91,7 +91,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
           </ul>
@@ -111,7 +111,8 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
+
               </div>
             </li>
             <li>
@@ -151,7 +152,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
             <li>
@@ -160,7 +161,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
             </li>
@@ -179,8 +180,8 @@ return (
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
             </li>
@@ -191,7 +192,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
           </ul>
@@ -211,7 +212,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
             <li>
@@ -231,7 +232,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
             <li>
@@ -239,8 +240,8 @@ return (
               <div className="skill-dots">
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
             </li>
@@ -261,7 +262,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
             <li>
@@ -281,7 +282,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
             <li>
@@ -311,7 +312,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
             <li>
@@ -321,7 +322,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
           </ul>
@@ -341,7 +342,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
             <li>
@@ -381,7 +382,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
             <li>
@@ -390,7 +391,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
             </li>
@@ -451,7 +452,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot"></div>
+                <div className="dot active"></div>
                 <div className="dot"></div>
               </div>
             </li>
@@ -482,7 +483,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
             <li>
@@ -492,7 +493,7 @@ return (
                 <div className="dot active"></div>
                 <div className="dot active"></div>
                 <div className="dot active"></div>
-                <div className="dot active"></div>
+                <div className="dot "></div>
               </div>
             </li>
             <li>
