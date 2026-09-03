@@ -35,15 +35,15 @@ const mockProjects = [
     linkedin_url: null,
     facebook_url: null
   },
-  {
+{
     id: 4,
-    name: "موقع شخصي",
-    description: "موقع شخصي تفاعلي يعرض السيرة الذاتية والمشاريع والمهارات. مصمم بتقنيات حديثة مع تحسين لمحركات البحث.\n\nالمميزات:\n• تصميم متجاوب\n• تحسين SEO\n• نموذج تواصل\n• معرض المشاريع\n• مدونة شخصية",
-    picture: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400",
-    tags: ["React", "CSS3", "Portfolio"],
-    github_url: "https://github.com/example/portfolio",
-    linkedin_url: "https://linkedin.com/in/example",
-    facebook_url: "https://facebook.com/example"
+    name: "Pro-Market E-Commerce Solution",
+    description: "منصة تجارة إلكترونية متقدمة مستوحاة من تجربة تسوق Amazon تم بناؤها باستخدام Python و Django. تتميز بمحرك بحث وفلترة ذكي، وسلة تسوق ديناميكية، وهيكلية متعددة التطبيقات لتنظيم إدارة المنتجات والطلبات.\n\n📖 عن المشروع:\nنظام متكامل لإدارة عمليات التجزئة المعقدة، يتجاوز العمليات الأساسية عبر تطبيق أنماط معمارية متقدمة مثل Context Processors و Custom Decorators لتحسين الأداء وتوفير تجربة تسوق واقعية.\n\n✨ المميزات الرئيسية:\n• فلترة وبحث متقدم (Amazon Style): فلترة ديناميكية حسب الفئة، نطاق السعر، العلامة التجارية، والمواصفات مع تقسيم صفحات متجاوب (Pagination).\n• هندسة المنتجات ومعاينتها: معرض صور تفاعلي (4 صور لكل منتج)، خاصية Zoom للصور، وسلايدرات تفاعلية بـ Swiper.js.\n• محرك اقتراح المنتجات: اقتراح تلقائي للمنتجات ذات الصلة بناءً على الفئات والتاغات التشابهية.\n• إدارة السلة والمفضلة: سلة تسوق ذكية تعتمد على Sessions، ونظام حفظ المنتجات المفضلة (Wishlist).\n• لوحة تحكم وإدارة طلبات: لوحة Admin احترافية لإدارة المخزون، والمنتجات، والطلبات، مع لوحة خاصة بالعميل لتتبع حالة الشراء.\n\n🛠️ التقنيات المستخدمة:\nPython 3.8+, Django, MySQL, HTML5/CSS3, Bootstrap 5, JavaScript (jQuery), Dynamic Querysets, REST Architecture.",
+    picture: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&q=80",
+    tags: ["Python", "Django", "MySQL", "Bootstrap"],
+    github_url: "https://github.com/CWD2500/E-Commerce-market",
+    linkedin_url: null,
+    facebook_url: null
   },
   {
     id: 5,
