@@ -10,7 +10,7 @@ const mockProjects = [
     name: "B2C E-Commerce Marketplace",
     description: "منصة تجارة إلكترونية متكاملة لبيع وشراء الأدوات المستعملة لضمان تنظيم العلاقة بين البائع والمشتري بشكل آمن ومستقر، مع فصل تام للصلاحيات ونظام محاسبي وإشرافي دقيق بنسبة عمولة 2% للمنصة.\n\n📖 عن المشروع:\nمنصة متطورة تعتمد نموذج Consumer-to-Business (B2C) لربط المشترين بالبائعين تحت إدارة تحكم شاملة للـ Admin لمنع الاحتيال.\n\n✨ المميزات الرئيسية:\n• إدارة المستخدمين والأدوار (RBAC): أدوار مخصصة (Buyer, Seller, Admin) مع حماية 2FA و Google OAuth والتحقق عبر OTP.\n• لوحة تحكم البائع: إدارة المنتجات والطلبات، إشعارات لحظية، ونظام محاسبي يخصم تلقائياً عمولة المنصة 2%.\n• لوحة تحكم الأدمن: مراجعة المنتجات والموافقة عليها، إدارة الفئات، تقارير أرباح لحظية وإدارة شاملة للحسابات.\n• تجربة المشتري: محرك بحث دقيق مع الفلترة، إضافة للسلة والمفضلة، تتبع الطلبات مع خاصية Soft Delete.\n• تفاعل وأداء متقدم: معاينة الصور بـ Zoom، معارض SwiperJS، حركة انسيابية بـ AOS و Framer Motion، مع كاش سريع للأداء.\n\n🛠️ التقنيات المستخدمة:\nLaravel 12, React 19, MySQL, Redux, Tailwind CSS, Google OAuth, 2FA, RESTful APIs.",
     picture: b2cMarketplaceImg,
-    tags: ["Laravel 12", "React 19", "MySQL"],
+    tags: ["Laravel 12", "React 19" , "Tailwind CSS", "MySQL"],
     github_url: "https://github.com/CWD2500/MultiVendor-B2C-Marketplace",
     linkedin_url: "https://www.linkedin.com/posts/muhammed-soliman-b95635335_%D8%AA%D9%85-%D8%A7%D9%86%D9%87%D8%A7%D8%A1-%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%AA%D8%AD%D8%AA-%D8%A5%D8%B4%D8%B1%D8%A7%D9%81%D9%8A-%D9%85%D8%AD%D9%85%D8%AF-%D8%B3%D9%84%D9%8A%D9%85%D8%A7%D9%86-activity-7394858637623468032-zYPT",
     facebook_url: null
