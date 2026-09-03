@@ -45,26 +45,6 @@ const mockProjects = [
     linkedin_url: null,
     facebook_url: null
   },
-  {
-    id: 5,
-    name: "نظام حجز مواعيد",
-    description: "نظام متكامل لحجز المواعيد للمؤسسات والمراكز الطبية. يدعم إدارة المواعيد وإشعارات العملاء.\n\nالمميزات:\n• حجز مواعيد آلي\n• إشعارات SMS وبريد\n• إدارة الموظفين\n• تقارير الحضور\n• دفع إلكتروني",
-    picture: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400",
-    tags: ["Web", "Booking", "API"],
-    github_url: "https://github.com/example/booking-system",
-    linkedin_url: "https://linkedin.com/company/example",
-    facebook_url: null
-  },
-  {
-    id: 6,
-    name: "تطبيق الطقس",
-    description: "تطبيق طقس بتقنيات حديثة يعرض حالة الطقس الحالية والتوقعات لـ7 أيام قادمة.\n\nالمميزات:\n• توقعات دقيقة\n• واجهة بصرية جذابة\n• إشعارات تغيير الطقس\n• دعم مواقع متعددة\n• بدون إعلانات",
-    picture: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400",
-    tags: ["JavaScript", "Weather API"],
-    github_url: "https://github.com/example/weather-app",
-    linkedin_url: null,
-    facebook_url: "https://facebook.com/example"
-  }
 ];
 
 export default function Projects() {
