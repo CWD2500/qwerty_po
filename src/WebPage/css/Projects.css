@@ -445,60 +445,67 @@
 
 
   /* Loading بثلاث ألوان */
-  .three-color-loading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
-    text-align: center;
-  }
+.four-color-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
 
-  .loading-dots {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
+.loading-dots {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
 
-  .dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    animation: bounce 1.4s infinite ease-in-out both;
-  }
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: bounce 1.6s infinite ease-in-out both;
+}
 
-  .dot-1 {
-    background: linear-gradient(135deg, #93258C, #243CAC);
-    animation-delay: -0.32s;
-  }
+.dot-1 {
+  background: linear-gradient(135deg, #93258c, #243cac);
+  animation-delay: -0.48s;
+}
 
-  .dot-2 {
-    background: linear-gradient(135deg, #243CAC, #762C95);
-    animation-delay: -0.16s;
-  }
+.dot-2 {
+  background: linear-gradient(135deg, #243cac, #762c95);
+  animation-delay: -0.32s;
+}
 
-  .dot-3 {
-    background: linear-gradient(135deg, #762C95, #93258C);
-    animation-delay: 0s;
-  }
+.dot-3 {
+  background: linear-gradient(135deg, #762c95, #93258c);
+  animation-delay: -0.16s;
+}
 
-  .three-color-loading p {
-    color: #243CAC;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0;
-  }
+.dot-4 {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  animation-delay: 0s;
+}
 
-  @keyframes bounce {
-    0%, 80%, 100% {
-      transform: scale(0.8);
-      opacity: 0.5;
-    }
-    40% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
+.four-color-loading p {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0.7);
+    opacity: 0.4;
   }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
 
   .error {
     display: flex;
